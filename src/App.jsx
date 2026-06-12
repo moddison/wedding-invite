@@ -98,9 +98,9 @@ function Intro() {
         </div>
       </div>
       <div className="intro__text">
-        <SectionLabel>WEDDING</SectionLabel>
-        <h2>Дорогие гости</h2>
-        <p>{inviteConfig.invitationText}</p>
+        <SectionLabel>{inviteConfig.intro.label}</SectionLabel>
+        <h2>{inviteConfig.intro.title}</h2>
+        <p>{inviteConfig.intro.text}</p>
       </div>
     </section>
   );
@@ -108,12 +108,23 @@ function Intro() {
 
 function Gallery() {
   return (
-    <section className="gallery" aria-label="Фотографии для замены заказчиком">
-      {inviteConfig.images.gallery.map((image, index) => (
-        <figure className="gallery__item" key={image}>
-          <img src={assetUrl(image)} alt={`Фото для приглашения ${index + 1}`} />
-        </figure>
-      ))}
+    <section className="gallery-section" aria-label="Фотографии пары">
+      <div className="gallery-heading">
+        <SectionLabel>{inviteConfig.gallery.label}</SectionLabel>
+        <h2>{inviteConfig.gallery.title}</h2>
+        <p>{inviteConfig.gallery.text}</p>
+      </div>
+      <div className="gallery">
+        {inviteConfig.gallery.items.map((item) => (
+          <figure className="gallery__item" key={item.image}>
+            <img src={assetUrl(item.image)} alt={item.title} />
+            <figcaption>
+              <strong>{item.title}</strong>
+              <span>{item.text}</span>
+            </figcaption>
+          </figure>
+        ))}
+      </div>
     </section>
   );
 }
@@ -443,12 +454,12 @@ function RsvpModal({ isOpen, onClose }) {
         <button className="modal-close" type="button" aria-label="Закрыть" onClick={onClose}>
           <X size={20} />
         </button>
-        <div className="modal-media" aria-hidden="true">
-          <img src={assetUrl(inviteConfig.images.hero)} alt="" />
-        </div>
         <div className="modal-content">
-          <div className="modal-progress" aria-hidden="true">
-            <span style={{ width: `${progress}%` }} />
+          <div className="modal-topline">
+            <span>{intro.label}</span>
+            <div className="modal-progress" aria-hidden="true">
+              <span style={{ width: `${progress}%` }} />
+            </div>
           </div>
 
           {status === 'success' ? (

@@ -1,0 +1,4 @@
+sep=;
+id;label;type;placeholder;required
+firstName;Ваше имя;text;Например, Иван;true
+lastName;Ваша фамилия;text;Например, Петров;true

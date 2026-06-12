@@ -1,0 +1,15 @@
+sep=;
+key;value
+googleScriptUrl;
+label;RSVP
+title;Подтвердите присутствие
+deadline;до 7 июля 2026 г.
+text;Ответьте на несколько вопросов: так мы заранее поймём количество гостей, напитки и важные пожелания.
+openButtonText;Заполнить анкету
+modalTitle;Анкета гостя
+modalText;Пара коротких вопросов по очереди. Это займёт меньше минуты.
+startButtonText;Начать
+submitButtonText;Отправить ответ
+successText;Ваш ответ отправлен. Спасибо, что помогаете нам подготовить праздник с заботой.
+errorText;Ответ не отправился. Проверьте интернет и попробуйте ещё раз.
+notConfiguredText;Таблица для ответов ещё не подключена. Добавьте ссылку Apps Script в googleScriptUrl файла content/survey-texts.csv.

@@ -1,2 +1,1 @@
-export { inviteConfig } from '../../invite.config';
-export { surveyConfig } from '../../survey.config';
+export { inviteConfig, surveyConfig } from '../generated/siteContent';

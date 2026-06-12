@@ -19,7 +19,7 @@
 7. `Who has access`: `Anyone`.
 8. Нажмите `Deploy`.
 9. Скопируйте Web app URL.
-10. Вставьте URL в `survey.config.js` в поле `googleScriptUrl`.
+10. Вставьте URL в `content/survey-texts.csv` в строку `googleScriptUrl`.
 11. Запустите `npm run build` и запушьте изменения.
 
 После отправки формы на сайте в таблице появится лист `RSVP`.
@@ -30,4 +30,4 @@
 - `Фамилия`
 - `ID`
 
-Колонки под вопросы добавляются автоматически по названиям из `survey.config.js`.
+Колонки под вопросы добавляются автоматически по названиям из `content/survey-questions.csv`.

@@ -20,13 +20,19 @@ rtk powershell -NoProfile -Command "npm run build"
 
 ## Что менять заказчику
 
+Основной способ настройки - таблицы в папке `content`. Их можно открыть в Excel или Google Sheets, отредактировать и сохранить обратно как CSV с разделителем `;`.
+
 Тексты сайта:
 
-- `invite.config.js` - имена, дата, программа, адрес, дресс-код, контакты, тексты секций.
+- `content/site.csv` - имена, дата, главный текст, место, дресс-код, заголовки секций.
+- `content/program.csv` - программа дня.
+- `content/notes.csv` - блоки 18+, цветы, контакты.
 
 Опросник RSVP:
 
-- `survey.config.js` - текст модалки, вопросы, варианты ответов, ссылка `googleScriptUrl` для записи в Google Таблицу.
+- `content/survey-texts.csv` - текст модалки и ссылка `googleScriptUrl` для записи в Google Таблицу.
+- `content/survey-fields.csv` - поля гостя, сейчас имя и фамилия.
+- `content/survey-questions.csv` - вопросы, варианты ответов и типы вопросов.
 
 Фотографии:
 
@@ -34,23 +40,20 @@ rtk powershell -NoProfile -Command "npm run build"
 - `img/photo-1.jpg`
 - `img/photo-2.jpg`
 - `img/photo-3.jpg`
+- `content/gallery.csv` - подписи к этим фото.
 
-Чтобы заменить фото, положите новый файл в `img` с тем же именем. В `invite.config.js` пути пишутся как `/wedding-hero.png`, `/photo-1.jpg`, `/photo-2.jpg`, `/photo-3.jpg`, потому что Vite публикует папку `img` в корень сайта.
+Чтобы заменить фото, положите новый файл в `img` с тем же именем. В `content/gallery.csv` пути пишутся как `/photo-1.jpg`, `/photo-2.jpg`, `/photo-3.jpg`.
+
+После изменения CSV ничего вручную генерировать не нужно: `start-site.bat`, `npm run dev`, `npm run build` и `npm run test` сами обновляют конфиг сайта.
 
 ## Как менять вопросы
 
-Откройте `survey.config.js` и редактируйте массив `questions`.
+Откройте `content/survey-questions.csv` и редактируйте строки.
 
-Пример вопроса с одним вариантом:
+Пример строки вопроса:
 
-```js
-{
-  id: 'attendance',
-  title: 'Вы сможете быть с нами?',
-  type: 'radio',
-  required: true,
-  options: ['Да, с радостью буду', 'Пока не уверен(а)', 'К сожалению, не смогу'],
-}
+```csv
+attendance;Вы сможете быть с нами?;Нам важно заранее понимать количество гостей.;radio;true;Да, с радостью буду|Пока не уверен(а)|К сожалению, не смогу;
 ```
 
 Поддерживаемые типы:
@@ -72,7 +75,7 @@ rtk powershell -NoProfile -Command "npm run build"
 6. `Execute as`: `Me`.
 7. `Who has access`: `Anyone`.
 8. Скопируйте Web app URL.
-9. Вставьте его в `survey.config.js` в поле `googleScriptUrl`.
+9. Вставьте его в `content/survey-texts.csv` в строку `googleScriptUrl`.
 
 После этого ответы гостей будут появляться в листе `RSVP` Google Таблицы. На сайте админки нет.
 
@@ -92,6 +95,8 @@ rtk powershell -NoProfile -Command "npm run build"
 - `src/components/Aurora.jsx` - WebGL-фон, адаптирован из React Bits Aurora.
 - `src/config/site.js` - импортирует корневые конфиги.
 - `src/lib/rsvpStorage.js` - отправляет ответы в Google Sheets.
+- `content/*.csv` - редактируемые таблицы для текстов, фото и опросов.
+- `scripts/generate-config.mjs` - собирает CSV в `src/generated/siteContent.js`.
 - `scripts/check-config.mjs` - проверяет картинки, вопросы и синтаксис Apps Script перед сборкой.
 - `deploy/google-sheets-apps-script.js` - бесплатная запись ответов в таблицу.
 - `start-site.bat` - локальный запуск с остановкой старого процесса на порту `5173`.

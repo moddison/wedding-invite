@@ -7,9 +7,29 @@ import { surveyConfig } from '../survey.config.js';
 
 const rootDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const supportedQuestionTypes = new Set(['radio', 'checkbox', 'select', 'textarea']);
+const requiredContentFiles = [
+  'site.csv',
+  'program.csv',
+  'notes.csv',
+  'gallery.csv',
+  'survey-texts.csv',
+  'survey-fields.csv',
+  'survey-questions.csv',
+];
 
 function fail(message) {
   throw new Error(message);
+}
+
+requiredContentFiles.forEach((fileName) => {
+  const filePath = path.join(rootDir, 'content', fileName);
+  if (!fs.existsSync(filePath)) {
+    fail('Не найден файл настроек: ' + filePath);
+  }
+});
+
+if (!fs.existsSync(path.join(rootDir, 'src', 'generated', 'siteContent.js'))) {
+  fail('Не найден сгенерированный конфиг. Запустите npm run generate.');
 }
 
 const imagePaths = [
