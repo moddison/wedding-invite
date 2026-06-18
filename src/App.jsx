@@ -29,6 +29,7 @@ function scrollTo(id) {
 export default function App() {
   const [rsvpForm, setRsvpForm] = useState({ name: '', attendance: '', drinks: [] });
   const [rsvpSent, setRsvpSent] = useState(false);
+  const [rsvpLoading, setRsvpLoading] = useState(false);
 
   return (
     <>
@@ -140,6 +141,7 @@ export default function App() {
         ) : (
           <form className="form" onSubmit={async (e) => {
             e.preventDefault();
+            setRsvpLoading(true);
             if (surveyConfig.googleScriptUrl) {
               try {
                 const [lastName = '', ...firstNameParts] = rsvpForm.name.split(' ');
@@ -189,7 +191,9 @@ export default function App() {
                 ))}
               </div>
             </div>
-            <button className="form__submit" type="submit">Отправить</button>
+            <button className="form__submit" type="submit" disabled={rsvpLoading}>
+              {rsvpLoading ? <span className="spinner" /> : 'Отправить'}
+            </button>
           </form>
         )}
       </section>
