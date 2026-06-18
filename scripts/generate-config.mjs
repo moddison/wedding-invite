@@ -80,7 +80,7 @@ const inviteConfig = {
     full: site['date.full'],
   },
   images: {
-    hero: '/wedding-hero.png',
+    hero: '/photo-1.jpg',
     gallery: gallery.map((item) => item.image),
   },
   hero: {

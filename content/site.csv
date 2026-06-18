@@ -1,15 +1,15 @@
 sep=;
 key;value
-couple.groom;Данил
+couple.groom;Данила
 couple.bride;Наталья
 couple.short;Д Н
-couple.display;Данил & Наталья
-date.day;7
+couple.display;Данил и Наталья
+date.day;1
 date.month;августа
 date.year;2026
-date.full;7 августа 2026
+date.full;1 августа 2026
 hero.eyebrow;приглашение на свадьбу
-hero.title;Данил & Наталья
+hero.title;Данил и Наталья
 hero.subtitle;Мы очень ждём день, когда рядом будут самые близкие. Будем счастливы разделить с вами нашу свадьбу.
 hero.scrollLabel;Посмотреть детали
 intro.label;WEDDING
@@ -20,10 +20,10 @@ gallery.title;Фотографии пары
 gallery.text;Эти кадры можно заменить на реальные фото Данила и Натальи: главный портрет, совместный снимок и атмосферный кадр.
 location.label;LOCATION
 location.title;Место праздника
-location.name;Название площадки
-location.address;Город, улица, дом
-location.note;Когда площадка будет утверждена, замените адрес и ссылку на карту в этой таблице.
-location.mapUrl;https://maps.google.com
+location.name;Здание Дворянского собрания
+location.address;г. Ульяновск, ул. Спасская, 17
+location.note;Здание Дворянского собрания
+location.mapUrl;https://yandex.ru/maps/?text=Здание+Дворянского+собрания+Ульяновск
 program.label;PROGRAM
 program.title;Программа дня
 dressCode.label;DRESS CODE

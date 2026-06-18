@@ -1,0 +1,85 @@
+Это свадебный сайт-приглашение. Его можно бесплатно разместить на GitHub Pages, а ответы гостей будут сохраняться в Google Таблицу.
+
+1. Как запустить локально
+
+Windows:
+
+start-site.bat
+macOS:
+
+chmod +x start-site.command
+./start-site.command
+Файл запуска сам:
+
+проверит Node.js/npm;
+установит зависимости проекта;
+остановит старый сайт на порту 5173;
+откроет сайт в браузере.
+Если Node.js не установлен, скрипт попробует установить его автоматически или откроет страницу установки.
+
+2. Где менять тексты
+
+Все тексты лежат в папке content.
+
+content/site.csv - имена, дата, место, дресс-код, основные тексты.
+content/program.csv - программа дня.
+content/notes.csv - блоки 18+, цветы, контакты.
+content/gallery.csv - подписи к фотографиям.
+content/survey-texts.csv - тексты анкеты и ссылка Google Apps Script.
+content/survey-fields.csv - поля гостя.
+content/survey-questions.csv - вопросы анкеты.
+Файлы можно открыть в Excel. Разделитель - ;.
+
+3. Где менять фото
+
+Фото лежат в папке img.
+
+Заменить на свои с теми же именами:
+
+img/wedding-hero.png - главное фото/фон.
+img/photo-1.jpg - фото 1.
+img/photo-2.jpg - фото 2.
+img/photo-3.jpg - фото 3.
+Если меняете имена файлов, обновите пути в content/gallery.csv.
+
+4. Как менять анкету
+
+Откройте:
+
+content/survey-questions.csv
+Типы вопросов:
+
+radio - один вариант.
+checkbox - несколько вариантов.
+select - выпадающий список.
+textarea - свободный текст.
+Варианты ответов пишутся через |, например:
+
+Шампанское|Вино|Безалкогольные напитки
+5. Как подключить ответы в Google Таблицу
+
+Создайте Google Таблицу.
+Откройте Расширения -> Apps Script.
+Вставьте код из deploy/google-sheets-apps-script.js.
+Нажмите Deploy -> New deployment.
+Тип выберите Web app.
+Execute as: Me.
+Who has access: Anyone.
+Нажмите Deploy.
+Скопируйте Web app URL.
+Вставьте URL в content/survey-texts.csv в строку googleScriptUrl.
+После этого ответы гостей будут появляться в листе RSVP.
+
+6. Как проверить
+
+npm run test
+Если ошибок нет, проект готов к публикации.
+
+7. Как опубликовать бесплатно
+
+Создайте репозиторий на GitHub.
+Загрузите туда проект.
+Откройте Settings -> Pages.
+В Source выберите GitHub Actions.
+После пуша сайт соберётся автоматически.
+Ссылку на сайт GitHub покажет в Settings -> Pages.

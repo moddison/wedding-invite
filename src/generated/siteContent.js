@@ -1,18 +1,18 @@
 export const inviteConfig = {
   "couple": {
-    "groom": "Данил",
+    "groom": "Данила",
     "bride": "Наталья",
     "short": "Д Н",
-    "display": "Данил & Наталья"
+    "display": "Данил и Наталья"
   },
   "date": {
-    "day": "7",
+    "day": "1",
     "month": "августа",
     "year": "2026",
-    "full": "7 августа 2026"
+    "full": "1 августа 2026"
   },
   "images": {
-    "hero": "/wedding-hero.png",
+    "hero": "/photo-1.jpg",
     "gallery": [
       "/photo-1.jpg",
       "/photo-2.jpg",
@@ -21,7 +21,7 @@ export const inviteConfig = {
   },
   "hero": {
     "eyebrow": "приглашение на свадьбу",
-    "title": "Данил & Наталья",
+    "title": "Данил и Наталья",
     "subtitle": "Мы очень ждём день, когда рядом будут самые близкие. Будем счастливы разделить с вами нашу свадьбу.",
     "scrollLabel": "Посмотреть детали"
   },
@@ -55,10 +55,10 @@ export const inviteConfig = {
   "location": {
     "label": "LOCATION",
     "title": "Место праздника",
-    "name": "Название площадки",
-    "address": "Город, улица, дом",
-    "note": "Когда площадка будет утверждена, замените адрес и ссылку на карту в этой таблице.",
-    "mapUrl": "https://maps.google.com"
+    "name": "Здание Дворянского собрания",
+    "address": "г. Ульяновск, ул. Спасская, 17",
+    "note": "Здание Дворянского собрания",
+    "mapUrl": "https://yandex.ru/maps/?text=Здание+Дворянского+собрания+Ульяновск"
   },
   "program": {
     "label": "PROGRAM",
