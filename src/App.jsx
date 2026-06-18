@@ -219,7 +219,7 @@ export default function App() {
         <div className="photo-section__image">
           <img src={assetUrl('wedding-hero.jpg')} alt="" />
         </div>
-        <div className="photo-section__credit">Photo: @soulsandcolors</div>
+        <div className="photo-section__credit">Photo: @anastasiyagood</div>
       </section>
 
       <section className="calendar" id="calendar">
