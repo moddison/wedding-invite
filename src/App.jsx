@@ -142,14 +142,18 @@ export default function App() {
             e.preventDefault();
             if (surveyConfig.googleScriptUrl) {
               try {
+                const [lastName = '', ...firstNameParts] = rsvpForm.name.split(' ');
                 await sendResponseToGoogleSheets(surveyConfig.googleScriptUrl, {
                   id: crypto.randomUUID(),
-                  createdAt: new Date().toISOString(),
-                  guest: { name: rsvpForm.name },
-                  answers: [
-                    { id: 'attendance', value: rsvpForm.attendance },
-                    { id: 'drinks', value: rsvpForm.drinks.join(', ') },
+                  guest: { firstName: firstNameParts.join(' ') || lastName, lastName: firstNameParts.length ? lastName : '' },
+                  questions: [
+                    { id: 'attendance', title: 'Сможете ли Вы присутствовать?' },
+                    { id: 'drinks', title: 'Предпочтения по напиткам' },
                   ],
+                  answers: {
+                    attendance: rsvpForm.attendance,
+                    drinks: rsvpForm.drinks.join(', '),
+                  },
                 });
               } catch {}
             }
