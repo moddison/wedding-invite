@@ -120,7 +120,7 @@ export const inviteConfig = {
 };
 
 export const surveyConfig = {
-  "googleScriptUrl": "",
+  "googleScriptUrl": "https://script.google.com/macros/s/AKfycbyiLLx-m2xU1Ok9pTBa99BFUpKPq3vxDlNMnrwh8rdGtQGSOIRzz3mRfMiMzAbMRfPK/exec",
   "intro": {
     "label": "RSVP",
     "title": "Подтвердите присутствие",
