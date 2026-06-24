@@ -213,7 +213,7 @@ export default function App() {
       </section>
 
       <section className="closing" id="closing">
-        <div className="closing__text">С нетерпением ждём Вас!</div>
+        <div className="closing__text">С нетерпением<br />ждём Вас!</div>
       </section>
 
       <section className="photo-section" id="photo-section">
