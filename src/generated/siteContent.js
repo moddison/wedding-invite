@@ -12,10 +12,10 @@ export const inviteConfig = {
     "full": "1 августа 2026"
   },
   "images": {
-    "hero": "/photo-1.jpg",
+    "hero": "/photo-11.jpg",
     "gallery": [
-      "/photo-1.jpg",
-      "/photo-2.jpg",
+      "/photo-11.jpg",
+      "/photo-22.jpg",
       "/photo-3.jpg"
     ]
   },
@@ -36,12 +36,12 @@ export const inviteConfig = {
     "text": "Эти кадры можно заменить на реальные фото Данила и Натальи: главный портрет, совместный снимок и атмосферный кадр.",
     "items": [
       {
-        "image": "/photo-1.jpg",
+        "image": "/photo-11.jpg",
         "title": "Фото невесты",
         "text": "Замените на красивый портрет Натальи."
       },
       {
-        "image": "/photo-2.jpg",
+        "image": "/photo-22.jpg",
         "title": "Совместный кадр",
         "text": "Замените на фото пары или кадр love story."
       },

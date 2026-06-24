@@ -104,7 +104,7 @@ export default function App() {
 
       <section className="photo-section">
         <div className="photo-section__image">
-          <img src={assetUrl('photo-2.jpg')} alt="" />
+          <img src={assetUrl('photo-22.jpg')} alt="" />
         </div>
       </section>
 
@@ -221,7 +221,7 @@ export default function App() {
 
       <section className="photo-section" id="photo-section">
         <div className="photo-section__image">
-          <img src={assetUrl('wedding-hero.jpg')} alt="" />
+          <img src={assetUrl('wedding-hero1.jpg')} alt="" />
         </div>
         <div className="photo-section__credit">Photo: @anastasiyagood</div>
       </section>
