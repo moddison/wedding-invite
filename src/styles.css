@@ -384,6 +384,23 @@ p {
   height: 60px;
   border-radius: 50%;
   box-shadow: 1px 1px 0 0 rgba(0,0,0,0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.dress-code__swatch::after {
+  content: '';
+  position: absolute; inset: 0;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.35) 0%,
+    rgba(255,255,255,0.1) 30%,
+    rgba(0,0,0,0.05) 50%,
+    rgba(255,255,255,0.15) 70%,
+    rgba(255,255,255,0.3) 100%
+  );
+  pointer-events: none;
 }
 
 .dress-code__swatch + .dress-code__swatch {
