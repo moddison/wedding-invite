@@ -20,7 +20,7 @@ const PROGRAM = [
 
 const COUPLE = { groom: inviteConfig.couple.groom, bride: inviteConfig.couple.bride };
 const PHONE = '+7 (917) 621-31-53';
-const WHATSAPP = '79783026695';
+const WHATSAPP = '79176213153';
 
 function scrollTo(id) {
   document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
@@ -243,7 +243,7 @@ export default function App() {
         <div className="contacts__name">{COUPLE.groom}</div>
         <a className="contacts__phone" href={`tel:${PHONE.replace(/\s/g, '')}`}>{PHONE}</a>
         <div className="contacts__social">
-          <a href={`https://api.whatsapp.com/send?phone=${WHATSAPP}&text=${encodeURIComponent('Здравствуйте, хочу заказать у вас приглашение einvite.ru')}`} target="_blank" rel="noreferrer">
+          <a href={`https://wa.me/${WHATSAPP}`} target="_blank" rel="noreferrer">
             <img src={ICONS.whatsapp} alt="WhatsApp" />
           </a>
         </div>
