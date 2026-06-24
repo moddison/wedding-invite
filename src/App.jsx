@@ -198,23 +198,6 @@ export default function App() {
         )}
       </section>
 
-      <hr className="divider" />
-
-      <section className="contacts" id="contacts">
-        <div className="section__title">Контакты</div>
-        <p className="contacts__desc">
-          По всем интересующим вас вопросам<br />
-          вы можете связаться с женихом
-        </p>
-        <div className="contacts__name">{COUPLE.groom}</div>
-        <a className="contacts__phone" href={`tel:${PHONE.replace(/\s/g, '')}`}>{PHONE}</a>
-        <div className="contacts__social">
-          <a href={`https://api.whatsapp.com/send?phone=${WHATSAPP}&text=${encodeURIComponent('Здравствуйте, хочу заказать у вас приглашение einvite.ru')}`} target="_blank" rel="noreferrer">
-            <img src={ICONS.whatsapp} alt="WhatsApp" />
-          </a>
-        </div>
-      </section>
-
       <section className="closing" id="closing">
         <div className="closing__text">Ждем Вас!</div>
       </section>
@@ -246,6 +229,23 @@ export default function App() {
               </div>
             );
           })}
+        </div>
+      </section>
+
+      <hr className="divider" />
+
+      <section className="contacts" id="contacts">
+        <div className="section__title">Контакты</div>
+        <p className="contacts__desc">
+          По всем интересующим вас вопросам<br />
+          вы можете связаться с женихом
+        </p>
+        <div className="contacts__name">{COUPLE.groom}</div>
+        <a className="contacts__phone" href={`tel:${PHONE.replace(/\s/g, '')}`}>{PHONE}</a>
+        <div className="contacts__social">
+          <a href={`https://api.whatsapp.com/send?phone=${WHATSAPP}&text=${encodeURIComponent('Здравствуйте, хочу заказать у вас приглашение einvite.ru')}`} target="_blank" rel="noreferrer">
+            <img src={ICONS.whatsapp} alt="WhatsApp" />
+          </a>
         </div>
       </section>
 
