@@ -135,8 +135,9 @@ export default function App() {
         <p className="dress-code__text">{inviteConfig.dressCode.women}</p>
         <div className="dress-code__gender">Мужчины</div>
         <div className="dress-code__palette">
-          <div className="dress-code__swatch" style={{ backgroundColor: '#ffffff' }} />
-          <div className="dress-code__swatch" style={{ backgroundColor: '#000000' }} />
+          {['#ffffff', '#000000', '#5B3A29', '#D5E0D0', '#C7B8A3', '#C49A6C', '#D1D7B0', '#2B4B2F'].map((color) => (
+            <div className="dress-code__swatch" key={color} style={{ backgroundColor: color }} />
+          ))}
         </div>
         <p className="dress-code__text">{inviteConfig.dressCode.men}</p>
       </section>
