@@ -904,6 +904,37 @@ p {
   }
 }
 
+.music-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.music-toggle:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+@keyframes music-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.music-toggle--playing {
+  animation: music-pulse 2s infinite;
+}
+
 @media (max-width: 560px) {
   .program__grid {
     gap: 16px;
