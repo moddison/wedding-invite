@@ -128,14 +128,14 @@ export default function App() {
         </p>
         <div className="dress-code__gender">Девушки</div>
         <div className="dress-code__palette">
-          {['#5B3A29', '#D5E0D0', '#C7B8A3', '#C49A6C', '#D1D7B0', '#2B4B2F'].map((color) => (
+          {['#806040', '#C0A060', '#606020', '#A08080', '#E0C0A0', '#402020'].map((color) => (
             <div className="dress-code__swatch" key={color} style={{ backgroundColor: color }} />
           ))}
         </div>
         <p className="dress-code__text">{inviteConfig.dressCode.women}</p>
         <div className="dress-code__gender">Мужчины</div>
         <div className="dress-code__palette">
-          {['#ffffff', '#000000', '#5B3A29', '#D5E0D0', '#C7B8A3', '#C49A6C', '#D1D7B0', '#2B4B2F'].map((color) => (
+          {['#ffffff', '#000000', '#806040', '#C0A060', '#606020', '#A08080', '#E0C0A0', '#402020'].map((color) => (
             <div className="dress-code__swatch" key={color} style={{ backgroundColor: color }} />
           ))}
         </div>
