@@ -128,7 +128,9 @@ export default function App() {
         </p>
         <div className="dress-code__gender">Девушки</div>
         <div className="dress-code__palette">
-          <div className="dress-code__swatch" style={{ backgroundImage: `url(${assetUrl('photogirl.jpg')})`, backgroundSize: 'cover', backgroundPosition: 'center' }} />
+          {['#503020', '#D0C0B0', '#90A080', '#F0F0B0'].map((color) => (
+            <div className="dress-code__swatch" key={color} style={{ backgroundColor: color }} />
+          ))}
         </div>
         <p className="dress-code__text">{inviteConfig.dressCode.women}</p>
         <div className="dress-code__gender">Мужчины</div>
