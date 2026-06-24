@@ -12,10 +12,10 @@ const ICONS = {
 };
 
 const PROGRAM = [
-  { time: '13:30', label: 'Сбор гостей', desc: 'Подарите нам свою улыбку и возьмите с собой хорошее настроение', icon: ICONS.group },
+  { time: '13:45', label: 'Сбор гостей', desc: 'Подарите нам свою улыбку и возьмите с собой хорошее настроение', icon: ICONS.group },
   { time: '14:00', label: 'Церемония', desc: 'Может быть трогательно, разрешается всплакнуть', icon: ICONS.ceremony },
-  { time: '14:30', label: 'Фуршет', desc: 'Самое время для вкусной еды, танцев и развлечений', icon: ICONS.eat },
-  { time: '18:00', label: 'Празднование с друзьями', desc: 'Надеемся, этот вечер вам понравится', icon: ICONS.firework },
+  { time: '14:30', label: 'Фуршет', desc: 'Самое время для поздравлений, фотографий, вкусной еды и бокала игристого', icon: ICONS.eat },
+  { time: '18:00', label: 'Время разделить важный момент с самыми близкими друзьями', desc: 'Надеемся, этот вечер вам понравится', icon: ICONS.firework },
 ];
 
 const COUPLE = { groom: inviteConfig.couple.groom, bride: inviteConfig.couple.bride };
